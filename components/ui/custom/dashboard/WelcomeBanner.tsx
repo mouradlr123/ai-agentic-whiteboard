@@ -4,6 +4,7 @@ import { useUser } from '@clerk/nextjs'
 import React from 'react'
 import { Button } from '../../button';
 import { Sparkle } from 'lucide-react';
+import CreateNewBoardDialog from './CreateNewBoardDialog';
 
 function WelcomeBanner() {
     const {user} = useUser();
@@ -15,7 +16,7 @@ function WelcomeBanner() {
             >Welcome Back, {user?.fullName}</h2>
             <p>Bring Your Ideas to Life on infinite canvas</p>
             <div className='mt-5 flex items-center gap-2'>
-                <Button size="lg">+ Create New Boarder</Button>
+                <CreateNewBoardDialog />
                 <Button variant="outline" size="lg"><Sparkle />AI Helper</Button>
             </div>
         </div>

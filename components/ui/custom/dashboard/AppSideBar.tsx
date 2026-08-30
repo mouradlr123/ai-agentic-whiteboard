@@ -15,6 +15,7 @@ import { Archive, Files, LayoutGrid, Settings, Sparkles, Users } from "lucide-re
 import { usePathname } from "next/navigation"
 import { Progress } from "../../progress"
 import { useUser } from "@clerk/nextjs"
+import CreateNewBoardDialog from "./CreateNewBoardDialog"
 
 export function AppSidebar() {
   
@@ -33,7 +34,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-            <Button>+ Create New Board</Button>
+            <CreateNewBoardDialog />
         </SidebarGroup>
         <SidebarGroup>
             <SidebarGroupLabel>
@@ -69,7 +70,7 @@ export function AppSidebar() {
 
       </SidebarContent>
       <SidebarFooter>
-        <Button>+ Create New Board</Button>
+        <CreateNewBoardDialog />
         <div className="p-4 my-3 border rounded-md">
             <h2 className="text-sm flex justify-between mb-1">
                 2 files created
